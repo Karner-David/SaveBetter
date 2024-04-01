@@ -7,24 +7,35 @@
 
 import SwiftUI
 
-enum Emoji: String, CaseIterable {
-    case 💀, 🫥, 😈, 🎃
-}
-
 struct ContentView: View {
+    @State var selection = 0
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
             MainScreen()
                 .tabItem() {
-                    Image(systemName: "phone.fill")
-                    Text("Calls")
-                }
+                    if (selection == 0) {
+                        Image("BT_icon_goals_active")
+                    } else {
+                        Image("BT_icon_goals_unactive")
+                    }
+                    Text("Goals")
+                }.tag(0)
+            
+            
             Tracker()
                 .tabItem() {
                     Image(systemName: "person.2.fill")
                     Text("People")
-                }
+                }.tag(1)
+            
+            
         }
+        .onAppear() {
+            UITabBar.appearance().backgroundColor = .white
+        }
+        .tint(.black)
+
     }
 }
 
