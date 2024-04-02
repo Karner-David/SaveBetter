@@ -10,6 +10,7 @@
 */
 
 import SwiftUI
+import Appwrite
 
 enum Emoji: String, CaseIterable {
     case 💀, 🫥, 😈, 🎃
@@ -62,6 +63,7 @@ struct MainScreen: View {
         }
     }
 }
+//.registerOAuthHandler()
 
 #Preview {
     MainScreen()

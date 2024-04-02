@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7242B2902BB0BC970028EB71 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242B28F2BB0BC970028EB71 /* MainScreen.swift */; };
 		7242B2922BB0BCAA0028EB71 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7242B2912BB0BCAA0028EB71 /* Tracker.swift */; };
+		724742472BBC92E300F0D56B /* Appwrite in Frameworks */ = {isa = PBXBuildFile; productRef = 724742462BBC92E300F0D56B /* Appwrite */; };
+		7247424A2BBC9BB400F0D56B /* AppService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724742492BBC9BB400F0D56B /* AppService.swift */; };
 		729496032BAF8DD200350AB9 /* SaveBetterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729496022BAF8DD200350AB9 /* SaveBetterApp.swift */; };
 		729496052BAF8DD200350AB9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729496042BAF8DD200350AB9 /* ContentView.swift */; };
 		729496072BAF8DD700350AB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729496062BAF8DD700350AB9 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* Begin PBXFileReference section */
 		7242B28F2BB0BC970028EB71 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		7242B2912BB0BCAA0028EB71 /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		724742482BBC954A00F0D56B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		724742492BBC9BB400F0D56B /* AppService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppService.swift; sourceTree = "<group>"; };
 		729495FF2BAF8DD200350AB9 /* SaveBetter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveBetter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		729496022BAF8DD200350AB9 /* SaveBetterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBetterApp.swift; sourceTree = "<group>"; };
 		729496042BAF8DD200350AB9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				724742472BBC92E300F0D56B /* Appwrite in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,11 +112,13 @@
 		729496012BAF8DD200350AB9 /* SaveBetter */ = {
 			isa = PBXGroup;
 			children = (
+				724742482BBC954A00F0D56B /* Info.plist */,
 				7242B28E2BB0BC590028EB71 /* Views */,
 				729496022BAF8DD200350AB9 /* SaveBetterApp.swift */,
 				729496042BAF8DD200350AB9 /* ContentView.swift */,
 				729496062BAF8DD700350AB9 /* Assets.xcassets */,
 				729496082BAF8DD700350AB9 /* Preview Content */,
+				724742492BBC9BB400F0D56B /* AppService.swift */,
 			);
 			path = SaveBetter;
 			sourceTree = "<group>";
@@ -157,6 +164,9 @@
 			dependencies = (
 			);
 			name = SaveBetter;
+			packageProductDependencies = (
+				724742462BBC92E300F0D56B /* Appwrite */,
+			);
 			productName = SaveBetter;
 			productReference = 729495FF2BAF8DD200350AB9 /* SaveBetter.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +239,9 @@
 				Base,
 			);
 			mainGroup = 729495F62BAF8DD100350AB9;
+			packageReferences = (
+				724742452BBC92E300F0D56B /* XCRemoteSwiftPackageReference "sdk-for-apple" */,
+			);
 			productRefGroup = 729496002BAF8DD200350AB9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -271,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7247424A2BBC9BB400F0D56B /* AppService.swift in Sources */,
 				7242B2922BB0BCAA0028EB71 /* Tracker.swift in Sources */,
 				7242B2902BB0BC970028EB71 /* MainScreen.swift in Sources */,
 				729496052BAF8DD200350AB9 /* ContentView.swift in Sources */,
@@ -441,6 +455,7 @@
 				DEVELOPMENT_TEAM = L67ZM4NK66;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaveBetter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -470,6 +485,7 @@
 				DEVELOPMENT_TEAM = L67ZM4NK66;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaveBetter/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -604,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		724742452BBC92E300F0D56B /* XCRemoteSwiftPackageReference "sdk-for-apple" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/appwrite/sdk-for-apple";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		724742462BBC92E300F0D56B /* Appwrite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 724742452BBC92E300F0D56B /* XCRemoteSwiftPackageReference "sdk-for-apple" */;
+			productName = Appwrite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 729495F72BAF8DD200350AB9 /* Project object */;
 }
