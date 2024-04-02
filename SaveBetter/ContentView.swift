@@ -25,8 +25,12 @@ struct ContentView: View {
             
             Tracker()
                 .tabItem() {
-                    Image(systemName: "person.2.fill")
-                    Text("People")
+                    if (selection == 1) {
+                        Image("BT_icon_entry_active")
+                    } else {
+                        Image("BT_icon_entry_unactive")
+                    }
+                    Text("Add Entry")
                 }.tag(1)
             
             
